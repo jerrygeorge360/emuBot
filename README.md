@@ -74,7 +74,7 @@ Create a `.env` file in the project root:
 ```env
 TELEGRAM_BOT_TOKEN=your_bot_token_here
 TON_API_TOKEN=your_tonapi_token_here
-BACKEND_URL=http://localhost:5000
+BACKEND_URL=http://localhost:8000
 ```
 
 ---
