@@ -1,5 +1,5 @@
 import requests
-from config import BACKEND_URL
+from bot.config import BACKEND_URL
 
 def decode_message(boc: str):
     response = requests.post(f"{BACKEND_URL}/decode", json={"boc": boc})

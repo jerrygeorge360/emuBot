@@ -1,7 +1,8 @@
 import telebot
 from telebot import types
-from config import BOT_TOKEN
-from backend_client import (
+from bot.config import BOT_TOKEN
+from bot.demo import demo_boc_value
+from bot.backend_client import (
     decode_message,
     emulate_events,
     emulate_trace,
@@ -38,10 +39,10 @@ def send_welcome(message):
         reply_markup=markup
     )
 
-# === Callback demo buttons ===
+# Callback demo buttons
 @bot.callback_query_handler(func=lambda call: call.data.startswith("demo_"))
 def handle_demo_callback(call):
-    demo_boc = "te6ccgEBAQEAAgAAAA=="
+    demo_boc = demo_boc_value
     if call.data == "demo_decode":
         result = decode_message(demo_boc)
         text = f"🧠 *Decoded Message Sample*\n`{result}`"

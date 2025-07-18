@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from emulation import (
+from backend.emulation import (
     emulation_decode,
     emulate_message_events,
     emulate_message_trace,
@@ -50,4 +50,4 @@ def root():
     return "TON Emulation API is running."
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(host="0.0.0.0", port=8080)
